@@ -26,7 +26,11 @@ link-agent:
 	ln -s AGENTS.md GEMINI.md
 
 test:
-	gotestsum --format testname
+	@if which gotestsum > /dev/null 2>&1 ; then \
+		gotestsum --format testname; \
+	else \
+		go test ./... -v; \
+	fi
 
 run:
 	go run .
