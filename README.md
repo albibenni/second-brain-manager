@@ -57,3 +57,15 @@ kindle-parser test "Book Title"
 ```
 
 For the full setup refer to [Kindle-Higlights](https://github.com/albibenni/kindle-highlights).
+
+## Testing
+
+- Run the test suite using the Makefile helper:
+
+```bash
+make test
+```
+
+- Behavior: the `test` target will use `gotestsum` for nicer output when it is installed; otherwise it falls back to `go test ./... -v`.
+- Note: Make executes recipe lines with the system shell (usually `/bin/sh`). If you need Bash-specific features in Make recipes, set `SHELL := /bin/bash` at the top of the `Makefile`.
+
