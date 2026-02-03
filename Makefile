@@ -48,4 +48,4 @@ docker-build:
 	docker build -t secondbrainmanager .
 
 install:
-	go build -o $(HOME)/go/bin/secondbrainmanager .
+	go build -o $(HOME)/go/bin/sb .
