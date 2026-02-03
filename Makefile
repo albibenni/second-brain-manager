@@ -26,7 +26,7 @@ link-agent:
 	ln -s AGENTS.md GEMINI.md
 
 test:
-	go test ./...
+	gotestsum --format testname
 
 run:
 	go run .
